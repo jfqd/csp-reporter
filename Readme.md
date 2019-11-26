@@ -30,6 +30,7 @@ We use Phusion Passenger, but you can use thin, puma, unicorn or any other rack 
 
 ## Test
 
+```
 curl -i -X POST localhost:9292 -d '{
    "csp-report": {
       "blocked-uri": "self",
@@ -40,6 +41,7 @@ curl -i -X POST localhost:9292 -d '{
       "violated-directive": "script-src"
    }
 }'
+```
 
 ## Usefull links
 
