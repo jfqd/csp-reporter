@@ -2,6 +2,7 @@ class CreateCspReports < ActiveRecord::Migration[5.2]
   def change
     create_table :csp_reports do |t|
       t.string  :domain
+      t.string  :request_ip
       t.string  :blocked_uri
       t.string  :disposition
       t.string  :document_uri

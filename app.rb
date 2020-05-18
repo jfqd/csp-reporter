@@ -41,6 +41,7 @@ post '/' do
       domain = URI.parse(report['document-uri'].to_s.downcase).host.sub(/\Awww\./,'') rescue ''
       CspReport.create(
         domain:              domain,
+        request_ip:          request.ip,
         blocked_uri:         report['blocked-uri'].to_s.downcase,
         disposition:         report['disposition'].to_s.downcase,
         document_uri:        report['document-uri'],
