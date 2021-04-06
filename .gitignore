@@ -2,3 +2,5 @@
 log/*.log
 .env*
 config/deploy.rb
+.rbenv-gemsets
+.ruby-version
