@@ -34,7 +34,7 @@ end
 
 post '/' do
   begin
-    ActiveRecord::Base.clear_active_connections!
+    ActiveRecord::Base.connection_handler.clear_active_connections!
     report_base = JSON.parse(request.body.read)
     if report_base.has_key? 'csp-report'
       report = report_base['csp-report']
